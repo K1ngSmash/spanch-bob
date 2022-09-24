@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,400&display=swap");
+/*Основная стилизация*/
+*,
+h1 {
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/*Шапка сайта ( navbar )*/
+.header__navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  z-index: 2;
+  background-color: white;
+}
+.navbar__logo img {
+  width: 200px;
+  cursor: pointer;
+}
+.navbar__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__links {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  font-weight: 600;
+  background-color: #ffe400;
+  border-radius: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.navbar__burger {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/menu-burger.png);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  cursor: pointer;
+}
+
+/*анимации для кнопок навигации*/
+.navbar__links::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url(../img/home.png);
+  transition: width 200ms, margin-left 200ms;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.4s all ease;
+}
+.navbar__links:is(:hover, :focus)::after {
+  width: 24px;
+  margin-left: 8px;
+  transition: 0.4s all ease;
+}
+.navbar__links:nth-child(2)::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url(../img/play.png);
+  transition: width 200ms, margin-left 200ms;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.4s all ease;
+}
+.navbar__links:nth-child(2):is(:hover, :focus)::after {
+  width: 24px;
+  margin-left: 8px;
+  transition: 0.4s all ease;
+}
+.navbar__links:nth-child(3)::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url(../img/search.png);
+  transition: width 200ms, margin-left 200ms;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.4s all ease;
+}
+.navbar__links:nth-child(3):is(:hover, :focus)::after {
+  width: 24px;
+  margin-left: 8px;
+  transition: 0.4s all ease;
+}
+
+/*Блок приветсвия*/
+.header__welcome {
+  width: 99vmax;
+  height: 50vmax;
+  background: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  filter: brightness(80%);
+  margin-bottom: 50px;
+  background-attachment: fixed;
+}
+.welcome__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.welcome__hr {
+  width: 10%;
+  height: 4px;
+  border-radius: 25px;
+  background-color: black;
+  margin: 25px auto;
+}
+
+/*Карточки*/
+.cards__block {
+  display: flex;
+  flex-direction: column;
+}
+.cards__st {
+  display: flex;
+  justify-content: center;
+}
+.cards__nd {
+  display: flex;
+  justify-content: center;
+}
+.cards__content {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 25px;
+  padding: 1%;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 1%;
+  transition: 0.8s all ease;
+}
+.cards__content:hover {
+  transform: scale(105%);
+  transition: 0.8s all ease;
+}
+.cards__content img {
+  width: 80%;
+  border-radius: 15px;
+}
+.cards__title {
+  margin: 10px 0;
+}
+.card__button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 0 auto;
+  width: 300px;
+  height: 50px;
+  font-weight: 600;
+  background-color: #ffe400;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/*Анимации для кнопок*/
+.card__button::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url(../img/arrow-up-free.png);
+  transition: width 200ms, margin-left 200ms;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.4s all ease;
+}
+.card__button:is(:hover, :focus)::after {
+  width: 24px;
+  margin-left: 8px;
+  transition: 0.4s all ease;
+}
+
+/*Основной блок*/
+.main__content {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 100%;
+}
+.content__block {
+  transition: 0.8s all ease;
+  padding: 1%;
+}
+.block__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.block__title {
+  margin-bottom: 10px;
+}
+.block__st {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.block__nd {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.block__img {
+  width: 30%;
+  border-radius: 25px;
+  margin: 0 20px;
+}
+.block__button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 70px auto 0 auto;
+  width: 200px;
+  height: 50px;
+  font-weight: 600;
+  background-color: #ffe400;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/*Анимации для кнопок*/
+.block__button::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url(../img/share.png);
+  transition: width 200ms, margin-left 200ms;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.4s all ease;
+}
+.block__button:is(:hover, :focus)::after {
+  width: 24px;
+  margin-left: 8px;
+  transition: 0.4s all ease;
+}
+
+/*Анимированный свайпер*/
+.swiper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 80%;
+}
+.swiper-wrapper .swiper-slide {
+  background-repeat: no-repeat;
+  background-size: 200px;
+  width: 200px;
+  height: 60vh;
+  margin-top: 50px;
+}
+
+/*Сами карточки*/
+.first {
+  background: url(../img/spanch1.jpg);
+}
+.second {
+  background: url(../img/spanch2.jpg);
+}
+.third {
+  background: url(../img/spanch3.jpg);
+}
+.fourth {
+  background: url(../img/spanch4.jpg);
+}
+.fifth {
+  background: url(../img/spanch5.jpg);
+}
+.sixth {
+  background: url(../img/spanch6.jpg);
+}
+.seventh {
+  background: url(../img/spanch7.jpg);
+}
+.eighth {
+  background: url(../img/spanch8.jpg);
+}
+.ninth {
+  background: url(../img/spanch9.jpg);
+}
+.tenth {
+  background: url(../img/spanch10.jpg);
+}
+.eleventh {
+  background: url(../img/spanch11.jpg);
+}
+.twelfth {
+  background: url(../img/spanch12.jpg);
+}
+.thirteenth {
+  background: url(../img/spanch13.jpg);
+}
+
+/*Наш плеер !!!*/
+.video__player {
+  max-width: 1200px !important;
+  max-height: 100% !important;
+  margin: 0 auto;
+}
+.video__title {
+  display: flex;
+  justify-content: center;
+  margin: 60px auto;
+}
+
+/*Раздел с комментариями*/
+.forum__avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.st__avatar {
+  background-image: url(../img/kitty.png);
+  background-size: 50px;
+}
+.nd__avatar {
+  background-image: url(../img/ava2.jpg);
+  background-size: 50px;
+}
+.th__avatar {
+  background-image: url(../img/ava3.jpg);
+  background-size: 50px;
+}
+.ft__avatar {
+  background-image: url(../img/ava4.jpg);
+  background-size: 50px;
+}
+.main__forum {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.forum__profile {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 20px auto;
+}
+.forum__inf {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.main__forum {
+  margin: 20px 0;
+}
+.forum__title {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/*тот самый инпут куда мы пишем комментарий*/
+.input__comm {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  resize: vertical;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+  height: 150px;
+  margin: 20px auto;
+  text-align: center;
+}
+.forum__btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+}
+.forum__button {
+  display: flex;
+  float: right;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  font-weight: 600;
+  background-color: #ffe400;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/*Анимации для кнопок*/
+.forum__button::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url(../img/paper-plane.png);
+  transition: width 200ms, margin-left 200ms;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.4s all ease;
+}
+.forum__button:is(:hover, :focus)::after {
+  width: 24px;
+  margin-left: 8px;
+  transition: 0.4s all ease;
+}
+
+/*Футер*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffe400;
+  align-items: center;
+}
+.footer__logo img {
+  width: 300px;
+  cursor: pointer;
+}
+.footer__input input {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  resize: vertical;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+  height: 50px;
+  margin: 10px 10px 0 0;
+}
+
+/*Кнопка которая будет перекидывать нас на верх*/
+#arrowTop {
+  height: 9px;
+  width: 14px;
+  color: green;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 5;
+}
+#arrowTop::before {
+  content: "";
+  display: block;
+  background-image: url(../img/angle-up-free.png);
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+}

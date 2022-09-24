@@ -1,0 +1,63 @@
+@media only screen and (max-width: 430px) {
+  .header .header__welcome {
+    display: flex;
+    width: 430px;
+    background-image: url(../img/mobilegubka.png);
+    background-position: center;
+    background-size: 430px 900px;
+  }
+  .header__navbar {
+    height: 100px;
+  }
+  .header__navbar .navbar__burger {
+    visibility: visible;
+    opacity: 1;
+  }
+  .navbar {
+    display: none;
+  }
+  .cards___subtitle {
+    display: none;
+  }
+  .cards__content .welcome__hr {
+    display: none;
+  }
+  .cards__title {
+    font-size: 12px;
+  }
+  .cards__block .card__button {
+    width: 40%;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .main .main__content {
+    display: none;
+  }
+  .swiper-wrapper .swiper-slide {
+    background-size: 300px !important;
+  }
+  .main__swiper .swiper {
+    height: 55vh;
+  }
+  .cards .cards__content {
+    width: 30%;
+    padding: 3%;
+  }
+  .video__player {
+    width: 380px !important;
+  }
+  .forum__comments {
+    display: none;
+  }
+  .forum__text .input__comm {
+    height: 80px;
+  }
+  .forum__write .forum__btn {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .footer__wrapper .footer__logo img {
+    width: 200px;
+  }
+}
