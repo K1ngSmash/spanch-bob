@@ -114,6 +114,14 @@ if (iconMenu) {
   });
 }
 
+//Скрываем блок
+$(document).ready(function () {
+  let hiddenRow = $(".expand");
+  $(".expandble__btn").click(function () {
+    hiddenRow.toggleClass("hidden");
+  });
+});
+
 /*Перекидывает вас наверх*/
 window.addEventListener("scroll", function () {
   document.getElementById("showScroll").innerHTML = pageYOffset + "px";

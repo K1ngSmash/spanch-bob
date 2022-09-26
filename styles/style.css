@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,400&display=swap");
 /*Основная стилизация*/
+
 *,
 h1 {
   box-sizing: border-box;
@@ -147,6 +148,10 @@ h1 {
 .cards__nd {
   display: flex;
   justify-content: center;
+  transition: all 0.8s ease 0s;
+}
+.expand {
+  transition: all 0.8s ease 0s;
 }
 .cards__content {
   display: flex;
@@ -189,6 +194,9 @@ h1 {
   border-radius: 25px;
   border: none;
   cursor: pointer;
+}
+.hidden {
+  display: none;
 }
 
 /*Анимации для кнопок*/
