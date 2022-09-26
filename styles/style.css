@@ -44,9 +44,7 @@ h1 {
   cursor: pointer;
 }
 .navbar__burger {
-  display: block;
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   width: 50px;
   height: 50px;
   background-image: url(../img/menu-burger.png);
@@ -54,7 +52,9 @@ h1 {
   background-size: 50px;
   cursor: pointer;
 }
-
+.navbar__adaptive1 {
+  display: none;
+}
 /*анимации для кнопок навигации*/
 .navbar__links::after {
   content: "";
@@ -162,6 +162,9 @@ h1 {
   margin: 1%;
   transition: 0.8s all ease;
 }
+.cards___subtitle {
+  font-size: 16px;
+}
 .cards__content:hover {
   transform: scale(105%);
   transition: 0.8s all ease;
@@ -232,12 +235,24 @@ h1 {
   flex-direction: row;
   margin-bottom: 20px;
   align-items: center;
+  transform: translateX(120%);
+  opacity: 0;
+}
+.block__st._active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.block__nd._active {
+  transform: translateX(0%);
+  opacity: 1;
 }
 .block__nd {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  transform: translateX(-120%);
+  opacity: 0;
 }
 .block__img {
   width: 30%;

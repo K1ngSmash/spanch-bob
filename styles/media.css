@@ -1,4 +1,37 @@
 @media only screen and (max-width: 430px) {
+  h1 {
+    font-size: 24px;
+  }
+  body {
+    background-color: #10100e;
+    color: white;
+  }
+  body._lock {
+    overflow: hidden;
+  }
+  .header__adaptive {
+    z-index: 5;
+    background-color: #10100e;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 100px 30px 30px 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 4;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+  }
+  .navbar._active {
+    left: 0;
+  }
   .header .header__welcome {
     display: flex;
     width: 430px;
@@ -10,11 +43,23 @@
     height: 100px;
   }
   .header__navbar .navbar__burger {
-    visibility: visible;
-    opacity: 1;
+    display: block;
+    position: relative;
+    z-index: 5;
   }
-  .navbar {
-    display: none;
+  .navbar__controls {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .navbar__controls .navbar__adaptive {
+    padding: 3%;
+    margin: 10px;
+    width: 50%;
+    color: black;
+  }
+  .navbar__controls .navbar__adaptive1 {
+    display: block;
   }
   .cards___subtitle {
     display: none;
@@ -26,7 +71,7 @@
     font-size: 12px;
   }
   .cards__block .card__button {
-    width: 40%;
+    width: 50%;
     font-size: 12px;
     margin-top: 20px;
   }
@@ -35,6 +80,11 @@
   }
   .swiper-wrapper .swiper-slide {
     background-size: 300px !important;
+    background-position: center;
+  }
+  .welcome__text .welcome__hr {
+    background-color: white;
+    border: none;
   }
   .main__swiper .swiper {
     height: 55vh;
@@ -59,5 +109,15 @@
   }
   .footer__wrapper .footer__logo img {
     width: 200px;
+  }
+  body #arrowTop::before {
+    background-image: url(../img/angle-up__adaptive.png);
+    width: 35px;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    padding: 3%;
+  }
+  .footer__input {
+    color: black;
   }
 }

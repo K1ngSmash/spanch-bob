@@ -16,15 +16,86 @@
   <body>
     <header class="header">
       <div class="header__navbar">
-        <div class="navbar__logo">
-          <img src="img/logo.png" alt="" />
+        <div class="header__adaptive">
+          <div class="navbar__logo">
+            <img src="img/logo.png" alt="" />
+          </div>
+          <a class="navbar__burger"></a>
         </div>
-        <a class="navbar__burger"></a>
         <div class="navbar">
           <nav class="navbar__controls">
-            <a class="navbar__links">Home</a>
-            <a class="navbar__links">Episodes</a>
-            <a class="navbar__links">Wiki</a>
+            <a
+              href="#"
+              data-goto=".section__st"
+              class="navbar__links navbar__adaptive"
+              >Welcome</a
+            >
+            <a
+              href="#"
+              data-goto=".section__nd"
+              class="navbar__links navbar__adaptive"
+              >Characters</a
+            >
+            <a
+              href="#"
+              data-goto=".section__th"
+              class="navbar__links navbar__adaptive"
+              >Watch</a
+            >
+            <a
+              href="#"
+              data-goto=".section__st"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
+            <a
+              href="#"
+              data-goto=".section__nd"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
+            <a
+              href="#"
+              data-goto=".section__th"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
+            <a
+              href="#"
+              data-goto=".section__st"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
+            <a
+              href="#"
+              data-goto=".section__nd"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
+            <a
+              href="#"
+              data-goto=".section__th"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
+            <a
+              href="#"
+              data-goto=".section__st"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
+            <a
+              href="#"
+              data-goto=".section__nd"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
+            <a
+              href="#"
+              data-goto=".section__th"
+              class="navbar__links navbar__adaptive navbar__adaptive1"
+              >Не реализовал !</a
+            >
           </nav>
         </div>
       </div>
@@ -32,7 +103,7 @@
     </header>
     <main class="main">
       <div class="main__cards">
-        <div class="welcome__text">
+        <div class="welcome__text section__st">
           <h1 class="welcome__title">Добро пожаловать!</h1>
           <hr class="welcome__hr" />
           <p class="welcome__subtitle" style="text-align: center">
@@ -40,7 +111,7 @@
             энциклопедию о мире Губки Боба и его друзей!
           </p>
         </div>
-        <div class="cards__block">
+        <div class="cards__block section__nd">
           <div class="cards cards__st">
             <div class="cards__content">
               <img src="img/губка.png" alt="" class="cards__img" />
@@ -105,7 +176,7 @@
         </div>
       </div>
       <div class="main__content">
-        <div class="content__block block__st">
+        <div class="content__block block__st _anim-items _anim-no-hide">
           <img src="img/семья.jpg" alt="" class="block__img" />
           <div class="block__text">
             <h3 class="block__title">Губка Боб Квадратные Штаны</h3>
@@ -126,7 +197,7 @@
             <button class="block__button">Подробнее</button>
           </div>
         </div>
-        <div class="content__block block__nd">
+        <div class="content__block block__nd _anim-items _anim-no-hide">
           <div class="block__text">
             <h3 class="block__title">Главный герой</h3>
             <p class="block__subtitle">
@@ -172,11 +243,12 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="main__video">
-        <h1 class="video__title">Смотреть 1 сезон 1 серию</h1>
-        <div id="player" class="video__player"></div>
-      </div>
-
+      <section id="section__th">
+        <div class="main__video section__th">
+          <h1 class="video__title">Смотреть 1 сезон 1 серию</h1>
+          <div id="player" class="video__player"></div>
+        </div>
+      </section>
       <div class="main__forum">
         <div class="forum__write">
           <h1 class="forum__title">
@@ -253,6 +325,7 @@
       </div>
     </footer>
     <div id="arrowTop" hidden></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="script/script.js"></script>
     <script src="//site.com/playerjs.js"></script>
